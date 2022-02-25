@@ -13,8 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: 
-        - docker build -t laxtour/multi-client ./client
-        - docker build -t laxtour/multi-nginx ./nginx
-        - docker build -t laxtour/multi-server ./server
-        - docker build -t laxtour/multi-worker ./worker
+    - run: docker build -t laxtour/multi-client ./client
+    - run: docker build -t laxtour/multi-nginx ./nginx
+    - run: docker build -t laxtour/multi-server ./server
+    - run: docker build -t laxtour/multi-worker ./worker
